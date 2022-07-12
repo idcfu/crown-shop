@@ -1,1 +1,16 @@
-/* stylelint-disable no-empty-source */
+@font-face {
+  font-family: 'Open Sans';
+  src:
+    url('@assets/fonts/open-sans/open-sans.woff2') format('woff2'),
+    url('@assets/fonts/open-sans/open-sans.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: 'Open Sans';
+  src:
+    url('@assets/fonts/open-sans/open-sans-700.woff2') format('woff2'),
+    url('@assets/fonts/open-sans/open-sans-700.woff') format('woff');
+  font-display: swap;
+}

@@ -1,0 +1,11 @@
+.link {
+  color: var(--color-primary-beta);
+  text-transform: uppercase;
+  text-decoration: none;
+  outline-offset: 3px;
+  transition: opacity 0.3s;
+
+  &_hovered {
+    opacity: 0.75;
+  }
+}

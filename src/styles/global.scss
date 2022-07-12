@@ -11,9 +11,14 @@ html {
 body {
   min-width: 320px;
   max-width: 1920px;
+  min-height: 100vh;
   margin: 0 auto;
-  background-color: var(--color-background);
-  box-shadow: 0 0 100px var(--color-shadow);
+  overflow-y: scroll;
+  font-size: 1.8rem;
+  font-family: var(--font-family);
+  color: var(--color-primary-beta);
+  background-color: var(--color-background-alpha);
+  box-shadow: 0 0 100px var(--color-primary-delta);
 }
 
 .sr-only {

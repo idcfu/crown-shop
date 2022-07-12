@@ -1,4 +1,12 @@
 :root {
-  --color-background: rgb(255 255 255);
-  --color-shadow: rgba(0 0 0 / 25%);
+  --font-family: 'Open Sans', Arial, sans-serif;
+
+  --color-primary-alpha: rgb(0 0 0);
+  --color-primary-beta: rgba(0 0 0 / 75%);
+  --color-primary-gamma: rgba(0 0 0 / 50%);
+  --color-primary-delta: rgba(0 0 0 / 25%);
+  --color-error: rgb(210 70 70);
+  --color-google: rgb(66 133 244);
+  --color-background-alpha: rgb(255 255 255);
+  --color-background-beta: rgb(255 255 255 / 75%);
 }
