@@ -1,0 +1,64 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript"
+  ],
+  "plugins": [
+    "simple-import-sort"
+  ],
+  "rules": {
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "semi",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        }
+      }
+    ],
+    "func-names": "off",
+    "func-style": [
+      "error",
+      "expression"
+    ],
+    "import/order": "off",
+    "max-len": "off",
+    "no-restricted-exports": "off",
+    "object-curly-newline": "off",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": [
+          "arrow-function",
+          "function-expression"
+        ],
+        "unnamedComponents": [
+          "arrow-function",
+          "function-expression"
+        ]
+      }
+    ],
+    "react/require-default-props": "off",
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^\\u0000"],
+          ["^"],
+          ["^@"],
+          ["^\\./?$", "^\\.(?!/?$)", "^\\./(?=.*/)(?!/?$)"]
+        ]
+      }
+    ]
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "ignorePatterns": "dist"
+}
