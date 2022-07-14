@@ -3,7 +3,7 @@
   outline-offset: 3px;
   transition: opacity 0.3s;
 
-  &_hovered {
+  .mouse-usage &:hover {
     opacity: 0.75;
   }
 }

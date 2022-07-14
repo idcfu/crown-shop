@@ -1,0 +1,30 @@
+.text-field {
+  position: relative;
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    line-height: 0;
+    color: var(--color-primary-gamma);
+    transform: translateY(-50%);
+    transition: font-size 0.3s, transform 0.3s;
+    pointer-events: none;
+
+    .text-field:focus-within &,
+    .text-field_active & {
+      font-size: 1.6rem;
+      transform: translateY(-28px);
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.8rem;
+    color: var(--color-primary-gamma);
+    border: 0;
+    border-bottom: 1px solid var(--color-primary-gamma);
+    outline: 0;
+  }
+}

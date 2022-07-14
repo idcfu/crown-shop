@@ -1,0 +1,28 @@
+.sign-up-form {
+  width: 100%;
+  max-width: 440px;
+
+  &__heading {
+    margin: 0;
+    font-size: 2.2rem;
+    color: var(--color-primary-alpha);
+  }
+
+  &__text {
+    margin: 10px 0 60px;
+    font-size: 1.6rem;
+  }
+
+  &__field {
+    margin-bottom: 60px;
+  }
+
+  &__sign-up {
+    display: flex;
+    flex-direction: column;
+
+    @include above($lg) {
+      flex-direction: row;
+    }
+  }
+}

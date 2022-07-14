@@ -1,0 +1,53 @@
+.button {
+  padding: 15px 45px;
+  font-size: 1.6rem;
+  font-family: var(--font-family);
+  color: var(--color-background-alpha);
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  background-color: var(--color-primary-alpha);
+  border: 1px solid var(--color-primary-alpha);
+  outline: 0;
+  cursor: pointer;
+
+  .mouse-usage &:hover,
+  &:focus-visible {
+    color: var(--color-primary-alpha);
+    background-color: var(--color-background-alpha);
+  }
+
+  &_variant_google {
+    color: var(--color-background-alpha);
+    background-color: var(--color-google);
+    border-color: var(--color-google);
+
+    .mouse-usage &:hover,
+    &:focus-visible {
+      color: var(--color-google);
+      background-color: var(--color-background-alpha);
+    }
+  }
+
+  &_variant_outlined {
+    color: var(--color-primary-alpha);
+    background-color: var(--color-background-alpha);
+
+    .mouse-usage &:hover,
+    &:focus-visible {
+      color: var(--color-background-alpha);
+      background-color: var(--color-primary-alpha);
+    }
+  }
+
+  &_variant_transparent {
+    color: var(--color-primary-alpha);
+    background-color: var(--color-background-beta);
+    border: 0;
+
+    .mouse-usage &:hover,
+    &:focus-visible {
+      color: var(--color-background-alpha);
+      background-color: var(--color-primary-beta);
+    }
+  }
+}

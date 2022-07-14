@@ -1,13 +1,16 @@
 import './Header.scss';
 
-import React, { useEffect, useId, useRef } from 'react';
+import React, { useContext, useEffect, useId, useRef } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 
 import { Link, Logo } from '@components';
+import { UserContext } from '@contexts';
 import ROUTES from '@lib/constants';
+import { signOut } from '@lib/firebase';
 
 const Header = function () {
   const { pathname: route } = useLocation();
+  const { user } = useContext(UserContext);
   const navigationID = useId();
   const headerRef = useRef<HTMLElement>(null);
   const togglerRef = useRef<HTMLButtonElement>(null);
@@ -66,29 +69,9 @@ const Header = function () {
     }
   };
 
-  const handleTogglerMouseenter = function () {
-    togglerRef.current?.classList.add('header__toggler_hovered');
-  };
-
-  const handleTogglerMouseleave = function () {
-    togglerRef.current?.classList.remove('header__toggler_hovered');
-  };
-
-  const handleTogglerTouchend = function () {
-    setTimeout(() => {
-      togglerRef.current?.classList.remove('header__toggler_hovered');
-    }, 100);
-  };
-
   useEffect(() => {
     hide();
   }, [route]);
-
-  useEffect(() => {
-    togglerRef.current?.addEventListener('mouseenter', handleTogglerMouseenter);
-    togglerRef.current?.addEventListener('mouseleave', handleTogglerMouseleave);
-    togglerRef.current?.addEventListener('touchend', handleTogglerTouchend);
-  }, []);
 
   return (
     <>
@@ -114,7 +97,17 @@ const Header = function () {
                 <Link to={ROUTES.shop}>Shop</Link>
               </li>
               <li className="header__item">
-                <Link to={ROUTES.auth}>Auth</Link>
+                {user
+                  ? (
+                    <button
+                      className="header__sign-out"
+                      type="button"
+                      onClick={signOut}
+                    >
+                      Sign Out
+                    </button>
+                  )
+                  : <Link to={ROUTES.auth}>Auth</Link>}
               </li>
             </ul>
           </nav>

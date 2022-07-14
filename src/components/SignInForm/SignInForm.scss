@@ -1,0 +1,39 @@
+.sign-in-form {
+  width: 100%;
+  max-width: 440px;
+
+  &__heading {
+    margin: 0;
+    font-size: 2.2rem;
+    color: var(--color-primary-alpha);
+  }
+
+  &__text {
+    margin: 10px 0 60px;
+    font-size: 1.6rem;
+  }
+
+  &__field {
+    margin-bottom: 60px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+
+    @include above($lg) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__sign-in {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    @include above($lg) {
+      margin: 0;
+    }
+  }
+}

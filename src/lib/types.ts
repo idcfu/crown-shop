@@ -1,3 +1,8 @@
-type IRoutes = '/' | '/auth' | '/shop';
+interface ICategory {
+  heading: string;
+  imageURL: string;
+}
 
-export default IRoutes;
+type ICategories = (ICategory & { id: number })[];
+
+export { ICategories, ICategory };

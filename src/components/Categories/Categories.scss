@@ -1,0 +1,30 @@
+.categories {
+  &__wrapper {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -20px 0 0 -20px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    flex-grow: 1;
+    height: 380px;
+    margin: 20px 0 0 20px;
+
+    @include above($sm) {
+      width: calc(50% - 20px);
+    }
+
+    @include above($md) {
+      width: calc(100% / 3 - 20px);
+    }
+  }
+}
